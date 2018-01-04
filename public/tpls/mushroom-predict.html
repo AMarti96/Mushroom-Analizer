@@ -1,0 +1,65 @@
+  <div class="container">
+    <div class="row text-center">
+      <p class="lead">Masmi</p>
+    </div>
+  </div>
+<br>
+<div class="container">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+  <form>
+    <fieldset>
+      <legend>Find your mushroom</legend>
+      <div class="form-group">
+        <label>If you smell it, what kind of odor does your mushroom?</label>
+      <md-input-container>
+        <label>Odor</label>
+        <md-select ng-model="odor">
+          <md-option ng-repeat="odor in odors" value="{{odor}}">{{odor}}</md-option>
+        </md-select>
+      </md-input-container>
+        <br>
+        <label>Now, if you take a look at the spores of the mushroom, what color do they have?</label>
+        <md-input-container>
+          <label>Spore color</label>
+          <md-select ng-model="spore">
+            <md-option ng-repeat="spore in spores" value="{{spore}}">{{spore}}</md-option>
+          </md-select>
+        </md-input-container>
+        <br>
+        <label>Let's focus now in the gill, what size are they? Narrow or broad?</label>
+        <md-input-container>
+          <label>Gill</label>
+          <md-select ng-model="gill">
+            <md-option ng-repeat="gill in gills" value="{{gill}}">{{gill}}</md-option>
+          </md-select>
+        </md-input-container>
+        <label>Does the mushroom have any bruises in it?</label>
+        <md-input-container>
+          <label>Bruises</label>
+          <md-select ng-model="bruise">
+            <md-option ng-repeat="bruise in bruises" value="{{bruise}}">{{bruise}}</md-option>
+          </md-select>
+        </md-input-container>
+        <br>
+        <label>Finally, if you take a look at the mushroom's ring, how is the surface below it?</label>
+        <md-input-container>
+          <label>Surface</label>
+          <md-select ng-model="surface">
+            <md-option ng-repeat="surface in surfaces" value="{{surface}}">{{surface}}</md-option>
+          </md-select>
+        </md-input-container>
+      </div>
+      <p>You have a mushroom with the following characteristics: </p>
+      <p>Odor = {{odor.toLowerCase()}}</p>
+      <p>Spore color = {{spore.toLowerCase()}}</p>
+      <p>Gill size =  {{gill.toLowerCase()}}</p>
+      <p>Stalk surface below the ring =  {{surface.toLowerCase()}}</p>
+      <p>Bruises =  {{bruise.toLowerCase()}}</p>
+    </fieldset>
+  </form>
+    <div style="text-align: center">
+    <button type="button" class="btn btn-primary" ng-click="predict()" style="width: 500px;height: 50px;">Predict</button>
+  </div>
+  </div>
+</div>

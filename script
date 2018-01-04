@@ -1,0 +1,13 @@
+touch ./public/dataset/prueba.arff
+
+cat > ./public/dataset/prueba.arff <<EOF
+@relation 'mushrooms_modificado-weka.filters.unsupervised.attribute.Remove-R1-2,6,8,10'
+
+@attribute bruises {bruises,no}
+@attribute odor {pungent,almond,anise,none,foul,creosote,fishy,spicy,musty}
+@attribute gill {narrow,broad}
+@attribute surface {smooth,fibrous,scaly,silky}
+@attribute spore {black,brown,purple,chocolate,white,green,orange,yellow,buff}
+@attribute class {poisonous,edible}
+
+@dataEOF

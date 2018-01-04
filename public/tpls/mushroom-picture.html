@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row text-center">
+        <p class="lead">Masmi</p>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="button" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+             ngf-accept="'image/*'" ngf-max-size="2MB" ngf-min-height="80"
+             ngf-resize="{width: 218, height: 337 , centerCrop:true}">Select image</div>
+        <img id="image" ngf-src="file">
+            <canvas id="myCanvas" style="visibility: hidden"></canvas>
+        <br><br><br><br><br><br>
+        <button ng-click="myCanvas2()">Predict</button>
+        </div>
+
+    </div>
+</div>

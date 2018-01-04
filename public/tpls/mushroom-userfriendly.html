@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="row text-center">
+        <p class="lead">Masmi</p>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <fieldset>
+                <legend>Find your mushroom</legend>
+                <div class="form-group">
+                    <label>If you look at the cap, what color does it have?</label>
+                    <md-input-container>
+                        <label>Cap color</label>
+                        <md-select ng-model="capColor">
+                            <md-option ng-repeat="capColor in capColors" value="{{capColor}}">{{capColor}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>And what kind of surface has the cap?</label>
+                    <md-input-container>
+                        <label>Cap surface</label>
+                        <md-select ng-model="capSurface">
+                            <md-option ng-repeat="capSurface in capSurfaces" value="{{capSurface}}">{{capSurface}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>Does the mushroom have any bruises in it?</label>
+                    <md-input-container>
+                        <label>Bruises</label>
+                        <md-select ng-model="bruise">
+                            <md-option ng-repeat="bruise in bruises" value="{{bruise}}">{{bruise}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>Let's focus now in the gill, what size are they? Narrow or broad?</label>
+                    <md-input-container>
+                        <label>Gill size</label>
+                        <md-select ng-model="gillSize">
+                            <md-option ng-repeat="gillSize in gillSizes" value="{{gillSize}}">{{gillSize}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>And which color are they?</label>
+                    <md-input-container>
+                        <label>Gill Color</label>
+                        <md-select ng-model="gillColor">
+                            <md-option ng-repeat="gillColor in gillColors" value="{{gillColor}}">{{gillColor}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>Now, looking at the stalk, what is its shape?</label>
+                    <md-input-container>
+                        <label>Stalk shape</label>
+                        <md-select ng-model="stalkShape">
+                            <md-option ng-repeat="stalkShape in stalkShapes" value="{{stalkShape}}">{{stalkShape}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>And the stalk root? How are they?</label>
+                    <md-input-container>
+                        <label>Stalk root</label>
+                        <md-select ng-model="stalkRoot">
+                            <md-option ng-repeat="stalkRoot in stalkRoots" value="{{stalkRoot}}">{{stalkRoot}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>What kind of ring does the mushroom have?</label>
+                    <md-input-container>
+                        <label>Ring type</label>
+                        <md-select ng-model="ringType">
+                            <md-option ng-repeat="ringType in ringTypes" value="{{ringType}}">{{ringType}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>When you find this mushrrom, how was it regarding the others like it?</label>
+                    <md-input-container>
+                        <label>Population</label>
+                        <md-select ng-model="population">
+                            <md-option ng-repeat="population in populations" value="{{population}}">{{population}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                    <br>
+                    <label>Finally, in what kind of habitat does this mushroom lives?</label>
+                    <md-input-container>
+                        <label>Habitat</label>
+                        <md-select ng-model="habitat">
+                            <md-option ng-repeat="habitat in habitats" value="{{habitat}}">{{habitat}}</md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+                <p>You have a mushroom with the following characteristics: </p>
+                <p>Cap surface = {{capSurface.toLowerCase()}}</p>
+                <p>Cap color = {{capColor.toLowerCase()}}</p>
+                <p>Bruises =  {{bruise.toLowerCase()}}</p>
+                <p>Gill size =  {{gillSize.toLowerCase()}}</p>
+                <p>Gill color =  {{gillColor.toLowerCase()}}</p>
+                <p>Stalk shape =  {{stalkShape.toLowerCase()}}</p>
+                <p>Stalk root =  {{stalkRoot.toLowerCase()}}</p>
+                <p>Ring type =  {{ringType.toLowerCase()}}</p>
+                <p>Population =  {{population.toLowerCase()}}</p>
+                <p>Habitat =  {{habitat.toLowerCase()}}</p>
+
+            </fieldset>
+        </form>
+        <div style="text-align: center">
+            <button type="button" class="btn btn-primary" ng-click="predict()" style="width: 500px;height: 50px;">Predict</button>
+        </div>
+    </div>
+</div>
